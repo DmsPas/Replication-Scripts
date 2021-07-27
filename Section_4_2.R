@@ -26,7 +26,6 @@ library(devtools)
 devtools::install_github('ramhiser/datamicroarray')
 library(datamicroarray)
 
-
 install.packages("caret",dependencies = TRUE,repos = "http://cran.us.r-project.org")
 library(caret)
 

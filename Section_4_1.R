@@ -43,7 +43,7 @@ generate_data<-function(type,p,n,normalize)
   # n         = number of samples
   # normalize = TRUE or FALSE
 {
-  set.seed(0);
+  set.seed(3);
   
   start_time <- Sys.time()
   
