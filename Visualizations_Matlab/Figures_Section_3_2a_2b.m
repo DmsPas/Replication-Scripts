@@ -37,7 +37,7 @@ plot(lambda,f1_equal   ,style{2},'color',C(2,:),'LineWidth',2); hold on;
 %legend({'\texttt{SQUIC}','\texttt{EQUAL}','\texttt{glasso}'},'interpreter','latex','location','southeast');
 
 ylabel('F1-Score','interpreter','latex','fontsize',18);
-xlabel('Scalar Sparsity Parameter ($\lambda$)','interpreter','latex','fontsize',18);
+xlabel('Scalar Tuning Parameter ($\lambda$)','interpreter','latex','fontsize',18);
 %xticks(lambda)
 
 %legend boxoff
@@ -68,7 +68,7 @@ plot(lambda,f1_equal   ,style{2},'color',C(2,:),'LineWidth',2); hold on;
 legend({'SQUIC','glasso','BigQUIC','EQUAL'},'interpreter','latex','location','southeast','fontsize',18);
 
 %ylabel('Runtime (sec)','interpreter','latex')
-xlabel('Scalar Sparsity Parameter ($\lambda$)','interpreter','latex','fontsize',18);
+xlabel('Scalar Tuning Parameter ($\lambda$)','interpreter','latex','fontsize',18);
 %xticks(lambda)
 
 legend boxoff

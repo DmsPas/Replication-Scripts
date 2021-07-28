@@ -47,7 +47,7 @@ dim=[0 0 1.4 1.2]*250;
 
 
 %%% TIMES
-figure
+figure('Renderer', 'painters', 'Position', [0 0 1.6 1.2]*250);
 bar(X,Y_times); 
 % ylim([0,1e4]);
 % title('Block SQUIC','interpreter','latex','fontsize',14);
@@ -63,12 +63,12 @@ tightfig;
 % breakyaxis([90,120]); 
 legend({'Scalar Tuning Parameter','Matrix Tuning Parameter'},'interpreter','latex','location','northeast','fontsize',18)
 legend('boxoff') 
-set(gcf,'position',dim);
-saveas(gcf,'Figure_4_1_matlab','pdf');
+% set(gcf,'position',dim);
+saveas(gcf,'Figure_4a','pdf');
 
 
 %%% ACC
-figure
+figure('Renderer', 'painters', 'Position', [0 0 1.6 1.2]*250);
 bar(X,Y_acc); 
 ylim([0.5,1]);
 ylabel('ACC','interpreter','latex','fontsize',18)
@@ -80,5 +80,5 @@ set(gca,'YMinorTick','on', 'FontSize', 16);
 tightfig;
 % legend({'Scalar Tuning Parameter','Matrix Tuning Parameter'},'interpreter','latex','location','northeast','fontsize',11)
 % legend('boxoff') 
-set(gcf,'position',dim);
-saveas(gcf,'Figure_4_2_matlab','pdf');
+% set(gcf,'position',dim);
+saveas(gcf,'Figure_4b','pdf');
