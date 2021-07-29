@@ -82,9 +82,9 @@ Linear_DA <- function(Data_Train, labels_train,
 }
 
 # datasets under consideration
-datasets  = c('burczynski','yeoh','shipp','alon','sorlie')
+datasets  = c('burczynski','yeoh','shipp','alon')
 # optimal scalar tuning parameters
-lambdas   = c(0.7, 0.8, 0.8, 0.8, 0.5)
+lambdas   = c(0.7, 0.8, 0.8, 0.8)
 # parameters for the estimation of the matrix tuning parameter
 eta       = 0.1; lambda_bias    = 0.95;
 ACC_Bias  = vector(); ACC_No_Bias = vector(); time_Bias = vector(); time_No_Bias = vector();
