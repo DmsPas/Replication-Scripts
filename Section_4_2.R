@@ -16,21 +16,23 @@ if (file.exists("Reproduction_data.rda")){
 
 library(SQUIC)
 
-install.packages("Matrix",repos = "http://cran.us.r-project.org")
+#install.packages("Matrix",repos = "http://cran.us.r-project.org")
 library(Matrix)
 
-install.packages("devtools",repos = "http://cran.us.r-project.org")
+#install.packages("devtools",repos = "http://cran.us.r-project.org")
 library(devtools)
 
-
-devtools::install_github('ramhiser/datamicroarray')
+#devtools::install_github('ramhiser/datamicroarray')
 library(datamicroarray)
 
-install.packages("caret",dependencies = TRUE,repos = "http://cran.us.r-project.org")
+#install.packages("caret",dependencies = TRUE, repos = "http://cran.us.r-project.org")
 library(caret)
 
-install.packages("ggplot2",repos = "http://cran.us.r-project.org")
+#install.packages("ggplot2",repos = "http://cran.us.r-project.org")
 library(ggplot2)
+
+#install.packages("emstreeR",repos = "http://cran.us.r-project.org")
+library(emstreeR)
 
 # ======================================== #
 
@@ -128,10 +130,15 @@ LDA_Null       = Linear_DA(Data_Train, labels_train,
 ACC_No_Bias[i] = LDA_Null$Results$overall[1];
 
 # Load the MST graphical bias
-A_tree = eval(as.name(paste(as.symbol(curr_dataset), '_tree', sep="")));
+# A_tree = eval(as.name(paste(as.symbol(curr_dataset), '_tree', sep="")));
+
+p   = nrow(Data_Train_scale);
+mst = ComputeMST(as.matrix(Data_Train_scale));
+G   = sparseMatrix(dims = c(p,p), i=mst$to, j=mst$from , x=rep(1, p)));
+G   = forceSymmetric(G,uplo="L") + Diagonal(nrow(G)); 
 
 # Tree Bias
-M_tree        = eta*A_tree;
+M_tree        = eta*G;
 res_tree      = SQUIC(Y = Data_Train_scale, lambda = lambda_bias, M = M_tree, verbose = 1)
 time_Bias[i]  = res_tree$info_time_total;
 Theta_tree    = D %*% res_tree$X %*% D;
