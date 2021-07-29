@@ -5,31 +5,31 @@
 # ================================== #
 library(SQUIC)
 
-install.packages("devtools",repos = "http://cran.us.r-project.org")
+#install.packages("devtools",repos = "http://cran.us.r-project.org")
 library(devtools)
 
-install.packages("Matrix",repos = "http://cran.us.r-project.org")
+#install.packages("Matrix",repos = "http://cran.us.r-project.org")
 library(Matrix)
 
-install.packages("MLmetrics",repos = "http://cran.us.r-project.org")
+#install.packages("MLmetrics",repos = "http://cran.us.r-project.org")
 library(MLmetrics)
 
-install.packages("glasso",repos = "http://cran.us.r-project.org")
+#install.packages("glasso",repos = "http://cran.us.r-project.org")
 library(glasso)
 
-install.packages("BigQuic",repos = "http://cran.us.r-project.org")
+#install.packages("BigQuic",repos = "http://cran.us.r-project.org")
 library(BigQuic)
 
-install.packages("ggplot2",repos = "http://cran.us.r-project.org")
+#install.packages("ggplot2",repos = "http://cran.us.r-project.org")
 library(ggplot2)
 
-devtools::install_github("cescwang85/EQUAL")
+#devtools::install_github("cescwang85/EQUAL")
 library(EQUAL)
 
-install.packages("scales",repos = "http://cran.us.r-project.org")
+#install.packages("scales",repos = "http://cran.us.r-project.org")
 library(scales)
 
-install.packages("latex2exp",repos = "http://cran.us.r-project.org")
+#install.packages("latex2exp",repos = "http://cran.us.r-project.org")
 library(latex2exp)
 # ================================== #
 
