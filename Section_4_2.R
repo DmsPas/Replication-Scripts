@@ -1,16 +1,6 @@
 # SECTION 4.2: Medical Data Classification with Structural Information
 
 # ======================================== #
-#        Set the working directory         #
-# ======================================== #
-
-if (file.exists("Reproduction_data.rda")){
-    load('Reproduction_data.rda')
-} else {
-    print("Set the working directory to the folder that contains the reproduction data")
-        print("setwd(PATH-TO-CURR-DIR)")
-}    
-# ======================================== #
 #       Load the necessary packages        #
 # ======================================== #
 
