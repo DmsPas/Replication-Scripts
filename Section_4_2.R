@@ -21,7 +21,7 @@ library(caret)
 #install.packages("ggplot2",repos = "http://cran.us.r-project.org")
 library(ggplot2)
 
-#install.packages("emstreeR",repos = "http://cran.us.r-project.org")
+# install.packages("emstreeR",repos = "http://cran.us.r-project.org")
 library(emstreeR)
 
 # ======================================== #
@@ -124,7 +124,7 @@ ACC_No_Bias[i] = LDA_Null$Results$overall[1];
 
 p   = nrow(Data_Train_scale);
 mst = ComputeMST(as.matrix(Data_Train_scale));
-G   = sparseMatrix(dims = c(p,p), i=mst$to, j=mst$from , x=rep(1, p)));
+G   = sparseMatrix(dims = c(p,p), i=mst$to, j=mst$from , x=rep(1, p));
 G   = forceSymmetric(G,uplo="L") + Diagonal(nrow(G)); 
 
 # Tree Bias
